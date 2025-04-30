@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git laravel git fzf)
+plugins=(git laravel git fzf zsh-autosuggestions zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -115,3 +115,9 @@ alias fcd='cd "$(find . -type d -print | fzf)"'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH="/home/berli/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/berli/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
