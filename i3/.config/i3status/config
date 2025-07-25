@@ -1,0 +1,35 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    interval = 5
+}
+
+order += "battery 0"
+order += "disk /"
+order += "cpu_usage"
+order += "memory"
+order += "time"
+
+battery 0 {
+    format = "🔋 %percentage"
+    last_full_capacity = true
+}
+
+disk "/" {
+    format = "💾 %avail"
+}
+
+cpu_usage {
+    format = "⚙️ %usage"
+}
+
+memory {
+    format = "🧠 %used / %total"
+    threshold_degraded = "1G"
+    format_degraded = "MEM CRIT: %used"
+}
+
+time {
+    format = "🕒 %Y-%m-%d %H:%M:%S"
+}
+
